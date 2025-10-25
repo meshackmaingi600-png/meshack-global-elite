@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESHACK GLOBAL ELITE</title>
+</head>
+<body style="background-color: #f9fbfd; color: #333; font-family: 'Segoe UI', Arial, sans-serif; text-align: center; padding: 40px;">
+    <h1 style="color: darkblue;">Welcome to Meshack Global Elite</h1>
+    <p>Your trusted Business partner.</p>
+<h2 style="color: #333;">Our Expertise</h2>
+<ul>
+  <li>Business and Financial Consultancy</li>
+  <li>Grant & Proposal Writing</li>
+  <li>Academic and Project Advisory</li>
+  <li>Entrepreneurship Training & Mentorship</li>
+</ul>
+
+<p><b>Empowering ideas, transforming businesses.</b></p>
+</body>
+</html>
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function MeshackGlobalElite() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-600 to-purple-700 text-white">
+      {/* Hero Section */}
+      <section className="text-center py-24 px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-extrabold mb-4"
+        >
+          Meshack Global Elite
+        </motion.h1>
+        <p className="text-xl italic mb-6">Where Grit Meets Greatness</p>
+        <Button className="bg-white text-blue-700 font-bold hover:bg-gray-200">
+          Contact Us
+        </Button>
+      </section>
+
+      {/* About Section */}
+      <section className="bg-white text-gray-900 py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-6">About Us</h2>
+        <p className="max-w-3xl mx-auto mb-4">
+          Meshack Global Elite is a consultancy firm driven by youthful energy and a passion for excellence. We empower students, entrepreneurs, and professionals with high-quality writing and strategic business solutions.
+        </p>
+        <p className="max-w-3xl mx-auto">
+          Our mission is to help you transform your goals into success through resilience, creativity, and precision. We believe in grit, growth, and greatness.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-6 text-center bg-gradient-to-b from-purple-700 to-blue-800">
+        <h2 className="text-3xl font-bold mb-10">Our Services</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {["Business Plans", "Grant Proposals", "Research Projects", "Strategic Management", "Business Project Improvement"].map((service, index) => (
+            <Card key={index} className="bg-white/10 backdrop-blur-lg border-none text-white shadow-lg hover:scale-105 transition-transform">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3">{service}</h3>
+                <p>Professional consultancy and writing service tailored to deliver excellence and impact.</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-white text-gray-900 py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+        <p className="mb-4">?? WhatsApp: <a href="https://wa.me/254723729563" className="text-blue-600 font-semibold">+254 723 729 563</a></p>
+        <p>?? Email: <a href="mailto:meshackmaingi600@gmail.com" className="text-blue-600 font-semibold">meshackmaingi600@gmail.com</a></p>
+        <p className="mt-6 text-gray-600">We respond fast — let's build greatness together!</p>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 bg-gray-900 text-gray-400 text-sm">
+        © {new Date().getFullYear()} Meshack Global Elite. All Rights Reserved.
+      </footer>
+    </div>
+  );
+}
